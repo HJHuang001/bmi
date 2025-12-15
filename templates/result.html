@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMI 結果</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">計算結果</h3>
+              <p class="lead">您的 BMI：<strong>{{ bmi }}</strong></p>
+              <p><strong>分類：</strong>{{ category }}</p>
+              <hr>
+              <p><strong>建議：</strong></p>
+              <p>{{ advice | replace('\n', '<br>') | safe }}</p>
+              <a href="/" class="btn btn-secondary mt-3">回到計算</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
